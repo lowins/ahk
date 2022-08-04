@@ -1,0 +1,84 @@
+#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
+
+paste00 =
+(
+paste 1
+)
+
+paste01 =
+(
+paste 2
+)
+
+paste02 =
+(
+paste 3
+)
+
+paste03 =
+(
+paste 4
+)
+
+paste04 =
+(
+paste 5
+)
+
+paste05 =
+(
+paste 6
+)
+
+paste06 =
+(
+paste 7
+)
+
+paste07 =
+(
+paste 8
+)
+
+^+0::
+    clipboard := paste00
+    send, ^v
+return
+
+^+1::
+    clipboard := paste01
+    send, ^v
+return
+
+^+2::
+    clipboard := paste02
+    send, ^v
+return
+
+^+3::
+    clipboard := paste03
+    send, ^v
+return
+
+^+4::
+    clipboard := paste04
+    send, ^v
+return
+
+^+5::
+    clipboard := paste05
+    send, ^v
+return
+
+^+6::
+    clipboard := paste06
+    send, ^v
+return
+
+^+7::
+    clipboard := paste07
+    send, ^v
+return

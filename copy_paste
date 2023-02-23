@@ -37,7 +37,6 @@ paste07:="
 (
 )"
 
-
 PasteCode:                       ;Hotkey code
   THK:=SubStr(A_ThisHotkey,3,1)  ;Get the number of the key that triggered it
   Clipboard:=paste0%THK%         ;Using that key, put the relevant clip on the CB

@@ -5,6 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Loop 10                              ;Loop through 1-10 and assign those as hotkeys
   Hotkey % "^+" A_Index-1,PasteCode  ;which will then call 'PasteCode' when fired
 
+; i needed that this way to paste multiline texts
 paste00:="
 (
 )"

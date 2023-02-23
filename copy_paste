@@ -1,5 +1,5 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Loop 10                              ;Loop through 1-10 and assign those as hotkeys
@@ -9,35 +9,33 @@ Loop 10                              ;Loop through 1-10 and assign those as hotk
 paste00:="
 (
 )"
-
 paste01:="
 (
 )"
-
 paste02:="
 (
 )"
-
 paste03:="
 (
 )"
-
 paste04:="
 (
 )"
-
 paste05:="
 (
 )"
-
 paste06:="
 (
 )"
-
 paste07:="
 (
 )"
-
+paste08:="
+(
+)"
+paste09:="
+(
+)"
 PasteCode:                       ;Hotkey code
   THK:=SubStr(A_ThisHotkey,3,1)  ;Get the number of the key that triggered it
   Clipboard:=paste0%THK%         ;Using that key, put the relevant clip on the CB

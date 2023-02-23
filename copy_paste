@@ -1,84 +1,46 @@
-#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+Loop 10                              ;Loop through 1-10 and assign those as hotkeys
+  Hotkey % "^+" A_Index-1,PasteCode  ;which will then call 'PasteCode' when fired
 
-paste00 =
+paste00:="
 (
-paste 1
-)
+)"
 
-paste01 =
+paste01:="
 (
-paste 2
-)
+)"
 
-paste02 =
+paste02:="
 (
-paste 3
-)
+)"
 
-paste03 =
+paste03:="
 (
-paste 4
-)
+)"
 
-paste04 =
+paste04:="
 (
-paste 5
-)
+)"
 
-paste05 =
+paste05:="
 (
-paste 6
-)
+)"
 
-paste06 =
+paste06:="
 (
-paste 7
-)
+)"
 
-paste07 =
+paste07:="
 (
-paste 8
-)
+)"
 
-^+0::
-    clipboard := paste00
-    send, ^v
-return
 
-^+1::
-    clipboard := paste01
-    send, ^v
-return
-
-^+2::
-    clipboard := paste02
-    send, ^v
-return
-
-^+3::
-    clipboard := paste03
-    send, ^v
-return
-
-^+4::
-    clipboard := paste04
-    send, ^v
-return
-
-^+5::
-    clipboard := paste05
-    send, ^v
-return
-
-^+6::
-    clipboard := paste06
-    send, ^v
-return
-
-^+7::
-    clipboard := paste07
-    send, ^v
-return
+PasteCode:                       ;Hotkey code
+  THK:=SubStr(A_ThisHotkey,3,1)  ;Get the number of the key that triggered it
+  Clipboard:=paste0%THK%         ;Using that key, put the relevant clip on the CB
+  Send ^v                        ;Paste it
+  Send {Tab}
+Return
